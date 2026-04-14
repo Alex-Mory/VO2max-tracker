@@ -16,7 +16,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import httpx
-from backend.config import STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, WEBHOOK_VERIFY_TOKEN
+from config import STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, WEBHOOK_VERIFY_TOKEN
 
 
 async def register(callback_url: str):
