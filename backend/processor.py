@@ -5,10 +5,10 @@ Bridges the Strava API response and the vo2max estimation engine.
 
 import statistics
 from typing import Optional
-from backend import vo2max as engine
-from backend import database as db
-from backend import strava
-from backend.config import (
+import vo2max as engine
+import database as db
+import strava
+from config import (
     ATHLETE_HRMAX,
     ATHLETE_HR_REST,
     ATHLETE_WEIGHT_KG,
