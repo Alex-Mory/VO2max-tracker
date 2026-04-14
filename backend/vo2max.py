@@ -6,10 +6,6 @@ Three methods, automatically selected based on available data:
   2. Power-based        — uses avg running power + body weight
   3. HR-adjusted VDOT   — uses VDOT corrected with HR/HRmax fraction (Swain 1994)
 
-Calibrated from Alex's race data:
-  - 10K 32:55  → VDOT 65.6
-  - HM  1:13:52 → VDOT 64.2
-  - Consensus: ~65 ml/kg/min
 """
 
 import math
