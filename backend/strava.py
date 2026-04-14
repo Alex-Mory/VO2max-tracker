@@ -4,7 +4,7 @@ strava.py — Strava API client with automatic token refresh.
 
 import httpx
 from datetime import datetime
-from backend.config import (
+from config import (
     STRAVA_CLIENT_ID,
     STRAVA_CLIENT_SECRET,
     STRAVA_REFRESH_TOKEN,
