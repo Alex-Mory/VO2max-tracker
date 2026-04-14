@@ -6,7 +6,7 @@ import sqlite3
 import json
 from datetime import datetime
 from typing import Optional
-from backend.config import DATABASE_PATH
+from config import DATABASE_PATH
 
 
 def get_conn() -> sqlite3.Connection:
