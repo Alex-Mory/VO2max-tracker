@@ -17,9 +17,9 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request, HTTPException, BackgroundTasks
 from fastapi.responses import JSONResponse, PlainTextResponse
 
-from backend.config import WEBHOOK_VERIFY_TOKEN
-from backend import database as db
-from backend.processor import process_activity
+from config import WEBHOOK_VERIFY_TOKEN
+import database as db
+from processor import process_activity
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger("vo2max")
