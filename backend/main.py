@@ -27,8 +27,14 @@ log = logging.getLogger("vo2max")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    db.init_db()
-    log.info("Database initialised")
+    try:
+        conn = db.get_conn()
+        conn.close()
+        log.info("Database connection successful ✓")
+    except Exception as e:
+        log.error("Database connection failed ✗", exc_info=True)
+        raise RuntimeError("Database is not reachable") from e
+
     yield
 
 
