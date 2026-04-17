@@ -16,6 +16,9 @@ WEBHOOK_VERIFY_TOKEN = os.getenv("WEBHOOK_VERIFY_TOKEN", "vo2max_tracker_secret"
 
 # Database
 DATABASE_URL = os.environ.get("DATABASE_URL")
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL is not set")
+
 
 # Athlete profile — pre-filled from your data
 ATHLETE_HRMAX      = int(os.getenv("ATHLETE_HRMAX", 192))
