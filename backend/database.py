@@ -2,8 +2,8 @@
 database.py — PostgreSQL database for storing runs and VO2max estimates.
 """
 
-import psycopg2
-import psycopg2.extras
+import psycopg
+from psycopg.rows import dict_row
 import json
 import os
 from typing import Optional
@@ -17,10 +17,11 @@ def get_conn():
     """
     Return a new PostgreSQL connection.
     """
-    return psycopg2.connect(
+    return psycopg.connect(
         DATABASE_URL,
-        cursor_factory=psycopg2.extras.RealDictCursor,
+        row_factory=dict_row,
     )
+
 
 
 # ---------------------------------------------------------------------
