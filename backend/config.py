@@ -15,7 +15,7 @@ STRAVA_REFRESH_TOKEN = os.getenv("STRAVA_REFRESH_TOKEN", "")
 WEBHOOK_VERIFY_TOKEN = os.getenv("WEBHOOK_VERIFY_TOKEN", "vo2max_tracker_secret")
 
 # Database
-DATABASE_PATH = os.getenv("DATABASE_PATH", "vo2max.db")
+DATABASE_URL = os.environ.get("DATABASE_URL")
 
 # Athlete profile — pre-filled from your data
 ATHLETE_HRMAX      = int(os.getenv("ATHLETE_HRMAX", 192))
