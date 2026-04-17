@@ -125,7 +125,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── Data loading ───────────────────────────────────────────────────────────────
-db.init_db()
 
 @st.cache_data(ttl=60)
 def load_data():
